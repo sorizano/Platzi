@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mini plataforma</title>
+
+	<link rel="stylesheet" href="/static/css/normalize.css">
+	<link rel="stylesheet" href="/static/css/clases.css">
+	<link rel="stylesheet" href="/static/css/discusion.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/static/js/prefixfree.min.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/js/discusion.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Mini Plataforma</h1>
+	</header>
+
+	<section id="wrapper">
+		<section id="libro">
+			<article id="clases">
+				<ul>
+					{% for clase in clases %}
+					<li>
+						<a data-id="{{ clase.id }}">
+							<figure>
+								<img src="/static/img/{{ clase.thumb }}">
+								<figcaption>
+									{{ clase.descripcion }}
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</article>
+			<article id="contenido-clase"></article>
+		</section>
+	</section>
+</body>
+</html>
