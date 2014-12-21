@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	{% load discusiones_tags %}
+
 	<meta charset="UTF-8">
 	<title>Mini plataforma</title>
 
@@ -37,6 +40,9 @@
 				</ul>
 			</article>
 			<article id="contenido-clase"></article>
+		</section>
+		<section id="side">
+			{% show_discusiones %}
 		</section>
 	</section>
 </body>
